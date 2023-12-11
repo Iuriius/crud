@@ -22,15 +22,17 @@ export default async function TopicsList() {
   return (
     <>
       {topics.map((topic: any) => (
-        <div className="my-4 p-4 border border-slate-300 rounded-lg flex justify-between items-start">
+        <div
+          key={topic._id}
+          className="my-4 p-4 border border-slate-300 rounded-lg flex justify-between items-start"
+        >
           <div className="max-w-md">
             <h2 className="font-bold text-2xl text-white p-2">{topic.title}</h2>
             <p className="p-2">
               {topic.description}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              assumenda nostrum culpa expedita vero atque nulla sit temporibus,
-              est dolorem ut velit aliquid omnis laborum hic excepturi alias
-              dolores vitae!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda
+              nostrum culpa expedita vero atque nulla sit temporibus, est dolorem ut velit
+              aliquid omnis laborum hic excepturi alias dolores vitae!
             </p>
           </div>
           <div className="flex gap-2 flex-col">
