@@ -28,16 +28,11 @@ export default async function TopicsList() {
         >
           <div className="max-w-md">
             <h2 className="font-bold text-2xl text-white p-2">{topic.title}</h2>
-            <p className="p-2">
-              {topic.description}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat assumenda
-              nostrum culpa expedita vero atque nulla sit temporibus, est dolorem ut velit
-              aliquid omnis laborum hic excepturi alias dolores vitae!
-            </p>
+            <p className="p-2">{topic.description}</p>
           </div>
           <div className="flex gap-2 flex-col">
             <EditBtn topic={topic} />
-            <RemoveBtn />
+            <RemoveBtn id={topic._id} />
           </div>
         </div>
       ))}
