@@ -4,11 +4,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function EditTopicForm({ id, title, description }) {
-  const [newtitle, setNewtitle] = useState(title);
-  const [newdescription, setNewdescription] = useState(description);
+  const [newTitle, setNewTitle] = useState(title);
+  const [newDescription, setNewDescription] = useState(description);
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
       const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
@@ -16,13 +16,13 @@ export default function EditTopicForm({ id, title, description }) {
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ newtitle, newdescription }),
+        body: JSON.stringify({ newTitle, newDescription }),
       });
       if (!res.ok) {
         throw new Error("Failed to update topic");
       }
-      router.refresh();
       router.push("/");
+      router.refresh();
     } catch (error) {
       console.log(error);
     }
@@ -31,17 +31,17 @@ export default function EditTopicForm({ id, title, description }) {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-y-2 mt-8">
       <input
-        onChange={(e) => setNewtitle(e.target.value)}
-        value={newtitle}
+        onChange={(e) => setNewTitle(e.target.value)}
+        value={newTitle}
         type="text"
         placeholder="Topic name"
         className="input input-bordered input-info w-full max-w-xs"
       />
 
       <textarea
-        onChange={(e) => setNewdescription(e.target.value)}
-        value={newdescription}
-        placeholder="Topic sescription"
+        onChange={(e) => setNewDescription(e.target.value)}
+        value={newDescription}
+        placeholder="Topic description"
         className="input input-bordered input-info w-full max-w-xs h-80 resize-none"
       />
 
