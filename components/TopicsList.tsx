@@ -21,7 +21,7 @@ export default async function TopicsList() {
 
   return (
     <>
-      {topics.map((topic: any) => (
+      {topics.toReversed().map((topic: any) => (
         <div
           key={topic._id}
           className="my-4 p-4 border border-slate-300 rounded-lg flex justify-between items-start"
