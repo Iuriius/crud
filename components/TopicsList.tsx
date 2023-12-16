@@ -18,13 +18,14 @@ const getTopics = async () => {
 
 export default async function TopicsList() {
   const { topics } = await getTopics();
+  // console.log(topics);
 
   return (
     <>
       {topics.toReversed().map((topic: any) => (
         <div
           key={topic._id}
-          className="my-4 p-4 border border-slate-300 rounded-lg flex justify-between items-start"
+          className="flex my-4 p-4 border border-slate-300 rounded-lg justify-between items-start"
         >
           <div className="max-w-md">
             <h2 className="font-bold text-2xl text-white p-2">{topic.title}</h2>

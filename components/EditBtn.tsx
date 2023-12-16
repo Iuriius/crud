@@ -3,11 +3,10 @@ import EditIcon from "./icons/EditIcon";
 
 export default function EditBtn({ topic }) {
   return (
-    <Link href={`/editTopic/${topic._id}`}>
-      <button className="btn btn-outline btn-warning">
+    <button className="btn btn-outline btn-warning flex">
+      <Link href={`/editTopic/${topic._id}`}>
         <EditIcon />
-        Edit Topic
-      </button>
-    </Link>
+      </Link>
+    </button>
   );
 }

@@ -2,7 +2,7 @@
 import RemoveIcon from "./icons/RemoveIcon";
 import { useRouter } from "next/navigation";
 
-export default function RemoveBtn({ id }) {
+export default function RemoveBtn({ id }: any) {
   const router = useRouter();
   const removeTopic = async () => {
     const confirmed = confirm("delete?");
@@ -20,7 +20,6 @@ export default function RemoveBtn({ id }) {
   return (
     <button onClick={removeTopic} className="btn btn-outline btn-error">
       <RemoveIcon />
-      Remove
     </button>
   );
 }
