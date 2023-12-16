@@ -24,6 +24,7 @@ export default function addTopic() {
       });
       if (res.ok) {
         router.push("/");
+        router.refresh();
       } else {
         throw new Error();
       }
