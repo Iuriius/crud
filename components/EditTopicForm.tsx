@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditTopicForm(
-  { id }: { id: any },
-  { title }: { title: any },
-  { description }: { description: any }
-) {
+export default function EditTopicForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
   const router = useRouter();
