@@ -1,6 +1,11 @@
 import EditTopicForm from "@/components/EditTopicForm";
 
-const getTopicById = async (id: any) => {
+interface Topic {
+  title: string;
+  description: string;
+}
+
+const getTopicById = async (id: string) => {
   try {
     const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
       cache: "no-store",
