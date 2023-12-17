@@ -1,5 +1,5 @@
 import EditTopicForm from "@/components/EditTopicForm";
-import { error, log } from "console";
+
 const getTopicById = async (id: any) => {
   try {
     const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
