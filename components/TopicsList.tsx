@@ -3,9 +3,12 @@ import RemoveBtn from "./RemoveBtn";
 
 const getTopics = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/topics", {
-      cache: "no-store",
-    });
+    const response = await fetch(
+      "https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics",
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Failed to fetch data");
