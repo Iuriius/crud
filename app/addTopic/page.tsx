@@ -34,25 +34,27 @@ export default function addTopic() {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center gap-y-2 mt-8">
-      <input
-        onChange={(e) => setTitle(e.target.value)}
-        value={title}
-        type="text"
-        placeholder="Topic name"
-        className="input input-bordered input-info w-full max-w-xs"
-      />
+    <div>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center gap-y-2 mt-8">
+        <input
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+          type="text"
+          placeholder="Topic name"
+          className="input input-bordered input-info w-full max-w-xs"
+        />
 
-      <textarea
-        onChange={(e) => setDescription(e.target.value)}
-        value={description}
-        placeholder="Topic sescription"
-        className="input input-bordered input-info w-full max-w-xs h-80 resize-none"
-      />
+        <textarea
+          onChange={(e) => setDescription(e.target.value)}
+          value={description}
+          placeholder="Topic sescription"
+          className="input input-bordered input-info w-full max-w-xs h-80 resize-none"
+        />
 
-      <button type="submit" className="btn btn-wide btn-info">
-        Add Topic
-      </button>
-    </form>
+        <button type="submit" className="btn btn-wide btn-info">
+          Add Topic
+        </button>
+      </form>
+    </div>
   );
 }
