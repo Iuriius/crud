@@ -8,7 +8,7 @@ export default function RemoveBtn({ id }: any) {
     const confirmed = confirm("delete?");
     if (confirmed) {
       const res = await fetch(
-        `https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics?id=${id}`,
+        `https://crud-iuriius-projects.vercel.app/api/topics?id=${id}`,
         {
           method: "DELETE",
         }

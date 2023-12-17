@@ -4,7 +4,7 @@ import RemoveBtn from "./RemoveBtn";
 const getTopics = async () => {
   try {
     const response = await fetch(
-      "https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics",
+      "https://crud-iuriius-projects.vercel.app/api/topics",
       {
         cache: "no-store",
       }

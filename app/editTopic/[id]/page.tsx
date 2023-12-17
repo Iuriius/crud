@@ -7,12 +7,9 @@ interface Topic {
 
 const getTopicById = async (id: string): Promise<Topic> => {
   try {
-    const res = await fetch(
-      `https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics/${id}`,
-      {
-        cache: "no-store",
-      }
-    );
+    const res = await fetch(`https://crud-iuriius-projects.vercel.app/api/topics/${id}`, {
+      cache: "no-store",
+    });
     if (!res.ok) {
       throw new Error("Failed to fetch topic");
     }

@@ -18,7 +18,7 @@ export default function EditTopicForm({ id, title, description }: EditTopicFormP
     e.preventDefault();
     try {
       const res = await fetch(
-        `https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics/${id}`,
+        `https://crud-iuriius-projects.vercel.app/api/topics/${id}`,
         {
           method: "PUT",
           headers: {

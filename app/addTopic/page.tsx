@@ -15,16 +15,13 @@ export default function AddTopic() {
       return;
     }
     try {
-      const res = await fetch(
-        "https://crud-b0bxu6zup-iuriius-projects.vercel.app/api/topics",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({ title, description }),
-        }
-      );
+      const res = await fetch("https://crud-iuriius-projects.vercel.app/api/topics", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ title, description }),
+      });
       if (res.ok) {
         router.push("/");
         router.refresh();
