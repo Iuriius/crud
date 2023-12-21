@@ -3,7 +3,7 @@ import RemoveBtn from "./RemoveBtn";
 
 const getTopics = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/topics", {
+    const response = await fetch("https://crud-nine-alpha.vercel.app/api/topics", {
       cache: "no-store",
     });
 

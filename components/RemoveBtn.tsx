@@ -7,7 +7,7 @@ export default function RemoveBtn({ id }: any) {
   const removeTopic = async () => {
     const confirmed = confirm("delete?");
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+      const res = await fetch(`https://crud-nine-alpha.vercel.app/api/topics?id=${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
