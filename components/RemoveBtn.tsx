@@ -7,12 +7,9 @@ export default function RemoveBtn({ id }: any) {
   const removeTopic = async () => {
     const confirmed = confirm("delete?");
     if (confirmed) {
-      const res = await fetch(
-        `https://crud-iuriius-projects.vercel.app/api/topics?id=${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+        method: "DELETE",
+      });
       if (res.ok) {
         router.refresh();
       } else {
